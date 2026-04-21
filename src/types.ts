@@ -1,0 +1,57 @@
+export interface LandData {
+  id: string;
+  maDinhDanh: string;
+  tenPhong: string;
+  tenDonViCungCap: string;
+  donViTaoLap: string;
+  loaiDuLieu: string;
+  nhanDe: string;
+  chuDe: string;
+  tomTat: string;
+  nguonDuLieu: string;
+  ngayPhatHanh: string;
+  donViCungCap: string;
+  donViLienQuan: string;
+  ngonNgu: string;
+  phamViDuLieu: string;
+  khaNangCungCap: string;
+  ngayGiaoNop: string;
+  thoiHanBaoQuan: string;
+  hoTenChuSuDung: string;
+  soToBanDo: string;
+  soThua: string;
+  loaiDat: string;
+  dienTich: string;
+  thongTinThuaDat: string;
+  soGiayChungNhan: string;
+  soQuyetDinh: string;
+  ngayCap: string;
+  loaiHoSo: string;
+  maHoSoLuuTru: string;
+  tieuDeHoSo: string;
+  thoiGianBatDau: string;
+  thoiGianKetThuc: string;
+  tongSoTaiLieu: string;
+  soLuongTo: string;
+  soLuongTrang: string;
+  tinhTrangVatLy: string;
+  soKyHieuHoSo: string;
+  hopSo: string;
+  ke: string;
+  khoLuuTru: string;
+  path: string;
+  assignedUid?: string;
+  createdAt: number;
+  updatedAt?: number;
+}
+
+export type FieldDefinition = {
+  key: keyof Omit<LandData, 'id' | 'createdAt' | 'updatedAt' | 'assignedUid'>;
+  label: string;
+  description?: string;
+  example?: string;
+  type?: 'text' | 'date' | 'number' | 'select' | 'textarea';
+  options?: string[];
+  defaultValue?: string;
+  group: string;
+};
